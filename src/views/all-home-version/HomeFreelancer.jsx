@@ -349,7 +349,7 @@ const HomeFreelancer = () => {
                   data-aos-delay="0"
                 >
                   <h2 className="has-secondary-font fw-normal text-center">
-                    <a href="#">@brunoerdison</a>
+                    <a href="#">@dog_physio_stella_kechagia</a>
                   </h2>
                 </div>
 

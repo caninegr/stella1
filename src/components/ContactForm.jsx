@@ -34,7 +34,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact_form">
       <div className="ptf-form-group">
-        <label data-number="01">What’s your name?</label>
+        <label data-number="01">Πως σε λένε;</label>
         <input
           type="text"
           name="name"
@@ -48,7 +48,7 @@ const ContactForm = () => {
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="02">What’s the name of your organization?</label>
+        <label data-number="02">Ποιο είναι το όνομα του κατοικίδιου σου;</label>
         <input
           type="text"
           name="organization"
@@ -62,7 +62,7 @@ const ContactForm = () => {
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="03">What’s your email address?</label>
+        <label data-number="03">Ποιο είναι το email σου;</label>
         <input
           name="email"
           type="text"
@@ -76,7 +76,7 @@ const ContactForm = () => {
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="04">Tell us about your project goals.</label>
+        <label data-number="04">Περιέγραψε το πρόβλημα που αντιμετωπίζετε</label>
         <textarea
           type="text"
           name="projectGoal"
@@ -90,7 +90,7 @@ const ContactForm = () => {
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="05">Do you have a timeline in mind?</label>
+        <label data-number="05">Πως λέγεται ο/η κτηνίατρος σου;</label>
         <input
           type="text"
           name="timeline"

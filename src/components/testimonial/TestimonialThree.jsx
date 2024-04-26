@@ -38,7 +38,7 @@ const TestimonialThree = () => {
     speed: 900,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
   };
 
   return (

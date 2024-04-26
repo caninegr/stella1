@@ -7,15 +7,15 @@ const CallToAction = () => {
       {/* <!--Animated Block--> */}
       <div className="ptf-animated-block" data-aos="fade" data-aos-delay="0">
         <div className="fz-12 has-color-3 text-uppercase">
-          Describe your <br />
-          project
+          Πως μπορω να <br />
+          σε βοηθησω;
         </div>
         {/* <!--Spacer--> */}
         <div className="ptf-spacer" style={{ "--ptf-xxl": "1.5625rem" }}></div>
         <div className="fz-100 fz-90--md has-black-color fw-normal lh-0p8 has-secondary-font">
           <Link className="ptf-filled-link" to="/contact">
             Call <br />
-            Bruno
+            Stella
           </Link>
         </div>
         {/* <!--Spacer--> */}

@@ -13,7 +13,7 @@ const FooterFour = () => {
             "
         >
           <p className="ptf-footer-copyright has-black-color">
-            &copy; {new Date().getFullYear()} <span>Moonex</span>. All Rights
+            &copy; {new Date().getFullYear()} <span>Dogphysio</span>. All Rights
             Reserved.
           </p>
         </div>
@@ -21,7 +21,7 @@ const FooterFour = () => {
 
         <div className="col-12 col-lg d-flex justify-content-center">
           <div className="ptf-widget ptf-widget-text has-black-color">
-            <a href="mailto:ibthemes21@gmail.com">ibthemes21@gmail.com</a>
+            <a href="mailto:info@dogphysio.gr">info@dogphysio.gr</a>
           </div>
         </div>
         {/* End .col */}
