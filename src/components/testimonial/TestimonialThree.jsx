@@ -3,34 +3,30 @@ import Slider from "react-slick";
 
 const testimonialContent = [
   {
-    descriptions: ` “Bruno was a real pleasure to work with and we look forward to
-    working with him again. He’s definitely the kind of designer you
-    can trust with a project from start to finish. Great services &
-    Recommended!”`,
-    name: "Jurgen Kloop",
-    designation: "Product Management",
-    companyName: "Google Inc",
-    webLink: "https://www.google.com/",
+    descriptions: ` “Καταπληκτική επαγγελματίας και άνθρωπος! 
+    Με οστεαρθρίτιδα και αυχενικό η Μπλερίτσα μας περπατάει ξανά 
+    κανονικά και έχει ποιότητα ζωής! Σε ευχαριστούμε πολύ Στέλλα!”`,
+    name: "Ράνια Γκαντάλη",
+    designation: "Σκύλος: Μπλερ",
   },
   {
-    descriptions: ` “Bruno was a real pleasure to work with and we look forward to
-    working with him again. He’s definitely the kind of designer you
-    can trust with a project from start to finish. Great services &
-    Recommended!”`,
-    name: "Jurgen Kloop",
-    designation: "Product Management",
-    companyName: "Google Inc",
-    webLink: "https://www.google.com/",
+    descriptions: ` “Την Στέλλα μας την σύστησε ο κτηνίατρος όταν παρέλυσαν και τα 
+    4 ποδαράκια απο το σκυλάκι μας. Απο την πρώτη επαφή κέρδισε την 
+    εμπιστοσύνη μας. Με την εμπειρία της, τις γνώσεις της, τον 
+    εξοπλισμό της και την αγάπη της για τους μικρούς μας φίλους, 
+    κατάφερε να κάνει το Lidaki μας να περπατήσει σε λιγότερο απο 2 μήνες.
+    Ευχαριστούμε πάρα πολύ για την πολύτιμη βοήθειά σου!”`,
+    name: "Μαρία Ευγενίδου",
+    designation: "Σκύλος: Lida",    
   },
   {
-    descriptions: ` “Bruno was a real pleasure to work with and we look forward to
-    working with him again. He’s definitely the kind of designer you
-    can trust with a project from start to finish. Great services &
-    Recommended!”`,
-    name: "Jurgen Kloop",
-    designation: "Product Management",
-    companyName: "Google Inc",
-    webLink: "https://www.google.com/",
+    descriptions: ` “Ο Μαξ ήταν από τις πολύ δύσκολες περιπτώσεις αποκαταστασης 
+    μετά από σοβαρό χτύπημα από αυτοκίνητο. Η Στέλλα βρεθηκε στο 
+    ρομο μας και με πίστη, εμπειρία, επιμονή, γνώσεις και αισιοδοξία, 
+    κατάφερε να ανατρέψει τη δύσκολη πρόγνωση και να δούμε τον αγαπημένο μας 
+    όρθιο και πάλι!”`,
+    name: "Αναστασία Χουρναζίδου",
+    designation: "Σκύλος: Μαξ",
   },
 ];
 
@@ -62,7 +58,7 @@ const TestimonialThree = () => {
             <div className="ptf-testimonial__meta">
               <h6 className="ptf-testimonial__author">{val.name}</h6>
               <div className="ptf-testimonial__info">
-                <span>{val.designation}</span> at{" "}
+                <span>{val.designation}</span> {" "}
                 <a href={val.webLink} target="_blank" rel="noopener noreferrer">
                   {val.companyName}
                 </a>
