@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const serviceContent = [
   {
     icon: "lnil lnil-cup",
-    titlePart1: "BRAND",
+    titlePart1: "aaaBRAND",
     titlePart2: "CONSULTANT",
     descriptions: ` We build and activate brands throung cultural insight &amp;
         strategic vision.`,
@@ -30,6 +30,27 @@ const serviceContent = [
     descriptions: ` We build and activate brands throung cultural insight &amp;
         strategic vision.`,
   },
+  {
+    icon: "lnil lnil-website-rank",
+    titlePart1: "UI/UX",
+    titlePart2: "SOLUTION",
+    descriptions: ` We build and activate brands throung cultural insight &amp;
+        strategic vision.`,
+  },
+  {
+    icon: "lnil lnil-3d",
+    titlePart1: "PACKAGING",
+    titlePart2: "",
+    descriptions: ` We build and activate brands throung cultural insight &amp;
+        strategic vision.`,
+  },
+  {
+    icon: "lnil lnil-video-camera-alt-1",
+    titlePart1: "MOTION VIDEO",
+    titlePart2: "& TVC",
+    descriptions: ` We build and activate brands throung cultural insight &amp;
+        strategic vision.`,
+  },  
 ];
 
 const ServiceOne = () => {
