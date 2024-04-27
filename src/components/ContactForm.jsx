@@ -29,7 +29,10 @@ const ContactForm = () => {
     e.target.reset();
   }
 
+  //const sendEmail = () => {};
+
   return (
+    //<form onSubmit={sendEmail} className="contact_form">
     <form onSubmit={handleSubmit(onSubmit)} className="contact_form">
 
       <div className="ptf-form-group">
