@@ -6,15 +6,15 @@ import * as Yup from "yup";
 const ContactForm = () => {
   // for validation
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Το όνομα σου είναι απαραίτητο"),
-    petname: Yup.string().required("Δεν πιστεύω να ξέχασες πως λένε το κατοικίδιο σου..."),
+    name: Yup.string().required("Το όνομα σου είναι απαραίτητο."),
+    petname: Yup.string().required("Δεν πιστεύω να ξέχασες πως λένε το κατοικίδιο σου;"),
     petage: Yup.string().required("Ευαίσθητη ερώτηση, αλλά πρέπει να απαντήσεις!"),
     pettype: Yup.string().required("Πρέπει να ξέρω!"),
-    projectGoal: Yup.string().required("Please, write your project goal."),
+    projectGoal: Yup.string().required("Χρειαζόμαστε μια διάγνωση."),
     vetname: Yup.string(),
     email: Yup.string()
-      .required("Email is required")
-      .email("Entered value does not match email format"),
+      .required("Το email είναι απαραίτητο!")
+      .email("Μη έγκυρη email διεύθυνση."),
     mobile: Yup.string().required("Πως θα επικοινωνήσω μαζί σου;"),
   });
 
@@ -29,10 +29,7 @@ const ContactForm = () => {
     e.target.reset();
   }
 
-  //const sendEmail = () => {};
-
   return (
-    //<form onSubmit={sendEmail} className="contact_form">
     <form onSubmit={handleSubmit(onSubmit)} className="contact_form">
 
       <div className="ptf-form-group">
