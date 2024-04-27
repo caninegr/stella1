@@ -9,9 +9,9 @@ const Address = () => {
         {/* <!--Spacer--> */}
         <div className="ptf-spacer" style={{ "--ptf-xxl": "1.25rem" }}></div>
         <p className="fz-20 lh-1p5 has-black-color">
-          90 Fairground Rd St FL 3290
+          Αγ.Σάββα 2, Πολίχνη <br /> 56533
           <br />
-          United States
+          Θεσσαλονίκη
         </p>
       </div>
 
@@ -24,11 +24,10 @@ const Address = () => {
         {/* <!--Spacer--> */}
         <div className="ptf-spacer" style={{ "--ptf-xxl": "1.25rem" }}></div>
         <p className="fz-20 lh-1p5 has-black-color">
-          <a href="mailto:hello@moonex.co">
-            hello@moonex.co
+          <a href="mailto:info@dogphysio.gr">
+            info@dogphysio.gr
             <br />
           </a>
-          <a href="mailto:career@moonex.co">career@moonex.co</a>
         </p>
       </div>
 
@@ -41,7 +40,7 @@ const Address = () => {
         {/* <!--Spacer--> */}
         <div className="ptf-spacer" style={{ "--ptf-xxl": "1.25rem" }}></div>
         <p className="fz-20 lh-1p5 has-black-color">
-          <a href="tel:+5632356565">+56 3235 65 65</a>
+          <a href="tel:+306938198989">+30 6938 198989</a>
         </p>
       </div>
 

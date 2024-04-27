@@ -2,22 +2,21 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { sendEmail } from "./email/sendEmail.ts";
 
 const ContactForm = () => {
   // for validation
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Name is required"),
-    organization: Yup.string().required("Organization name is required"),
+    name: Yup.string().required("Το όνομα σου είναι απαραίτητο"),
+    petname: Yup.string().required("Δεν πιστεύω να ξέχασες πως λένε το κατοικίδιο σου..."),
+    petage: Yup.string().required("Ευαίσθητη ερώτηση, αλλά πρέπει να απαντήσεις!"),
+    pettype: Yup.string().required("Πρέπει να ξέρω!"),
     projectGoal: Yup.string().required("Please, write your project goal."),
-    timeline: Yup.string().required("Pleae write if you have timeline."),
+    vetname: Yup.string(),
     email: Yup.string()
       .required("Email is required")
       .email("Entered value does not match email format"),
-    budget: Yup.string().required("Pleaes select your budget"),
-    acceptTerms: Yup.bool().oneOf(
-      [true],
-      "Accept Terms and Conditions is required"
-    ),
+    mobile: Yup.string().required("Πως θα επικοινωνήσω μαζί σου;"),
   });
 
   const formOptions = { resolver: yupResolver(validationSchema) };
@@ -33,6 +32,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact_form">
+
       <div className="ptf-form-group">
         <label data-number="01">Πως σε λένε;</label>
         <input
@@ -51,18 +51,49 @@ const ContactForm = () => {
         <label data-number="02">Ποιο είναι το όνομα του κατοικίδιου σου;</label>
         <input
           type="text"
-          name="organization"
-          {...register("organization")}
-          className={`${errors.organization ? "is-invalid" : ""}`}
+          name="petname"
+          {...register("petname")}
+          className={`${errors.petname ? "is-invalid" : ""}`}
         />
-        {errors.organization && (
-          <div className="invalid-feedback">{errors.organization?.message}</div>
+        {errors.petname && (
+          <div className="invalid-feedback">{errors.petname?.message}</div>
         )}
       </div>
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="03">Ποιο είναι το email σου;</label>
+        <label data-number="03">Τι ηλικία έχει;</label>
+        <input
+          type="text"
+          name="petage"
+          {...register("petage")}
+          className={`${errors.petage ? "is-invalid" : ""}`}
+        />
+        {errors.petage && (
+          <div className="invalid-feedback">{errors.petage?.message}</div>
+        )}
+      </div>
+      {/* End .ptf-form-group */}
+
+      <div className="ptf-form-group">
+        <label data-number="04">Τι ζωάκι είναι;</label>
+        <select
+          name="pettype"
+          {...register("pettype")}
+          className={`${errors.pettype ? "is-invalid" : ""}`}
+        >
+          <option value="dog">Σκύλος</option>
+          <option value="cat">Γάτα</option>
+          <option value="other">Άλλο</option>
+        </select>
+        {errors.pettype && (
+          <div className="invalid-feedback">{errors.pettype?.message}</div>
+        )}
+      </div>
+      {/* End .ptf-form-group */}    
+
+      <div className="ptf-form-group">
+        <label data-number="05">Ποιο είναι το email σου;</label>
         <input
           name="email"
           type="text"
@@ -76,7 +107,7 @@ const ContactForm = () => {
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="04">Περιέγραψε το πρόβλημα που αντιμετωπίζετε</label>
+        <label data-number="06">Περιέγραψε το πρόβλημα που αντιμετωπίζεις.</label>
         <textarea
           type="text"
           name="projectGoal"
@@ -90,56 +121,29 @@ const ContactForm = () => {
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="05">Πως λέγεται ο/η κτηνίατρος σου;</label>
+        <label data-number="07">Πως λέγεται ο/η κτηνίατρος σου;</label>
         <input
           type="text"
-          name="timeline"
-          {...register("timeline")}
-          className={`${errors.timeline ? "is-invalid" : ""}`}
+          name="vetname"
+          {...register("vetname")}
+          className={`${errors.vetname ? "is-invalid" : ""}`}
         />
-        {errors.timeline && (
-          <div className="invalid-feedback">{errors.timeline?.message}</div>
+        {errors.vetname && (
+          <div className="invalid-feedback">{errors.vetname?.message}</div>
         )}
       </div>
       {/* End .ptf-form-group */}
 
       <div className="ptf-form-group">
-        <label data-number="06">What have you budgeted for this project?</label>
-        <select
-          name="budget"
-          {...register("budget")}
-          className={`${errors.budget ? "is-invalid" : ""}`}
-        >
-          <option value="">$30,000 and under</option>
-          <option value="100-200">100$-200$</option>
-          <option value="200-500">200$-500$</option>
-          <option value="500-1000">500$-1000$</option>
-        </select>
-        {errors.budget && (
-          <div className="invalid-feedback">{errors.budget?.message}</div>
-        )}
-      </div>
-      {/* End .ptf-form-group */}
-
-      {/* <!--Spacer--> */}
-      <div className="ptf-spacer" style={{ "--ptf-xxl": "2.5rem" }}></div>
-
-      <div className="ptf-form-group agreement-checkbox ">
+        <label data-number="08">Το κινητό σου τηλέφωνο;</label>
         <input
-          name="acceptTerms"
-          type="checkbox"
-          id="acceptTerms"
-          {...register("acceptTerms")}
-          className={` ${errors.acceptTerms ? "is-invalid" : ""}`}
+          type="text"
+          name="mobile"
+          {...register("mobile")}
+          className={`${errors.mobile ? "is-invalid" : ""}`}
         />
-
-        <label className="ptf-checkbox" htmlFor="acceptTerms">
-          <span className="ptf-checkbox__checkmark"></span>I agree to receive
-          occasional MoonexLabs newsletters containing news & advice on creating
-          personal and business progress via digital tech.
-        </label>
-        {errors.acceptTerms && (
-          <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
+        {errors.mobile && (
+          <div className="invalid-feedback">{errors.mobile?.message}</div>
         )}
       </div>
       {/* End .ptf-form-group */}
@@ -148,7 +152,7 @@ const ContactForm = () => {
       <div className="ptf-spacer" style={{ "--ptf-xxl": "5.625rem" }}></div>
 
       <button className="ptf-submit-button">
-        Submit
+        Αποστολή
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

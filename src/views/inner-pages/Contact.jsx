@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>Moonex - Contact</title>
+        <title>Στέλλα Κεχαγιά - Επικοινωνία</title>
       </Helmet>
       {/* End Page SEO Content */}
 
@@ -37,8 +37,7 @@ const Contact = () => {
                     data-aos-delay="0"
                   >
                     <h1 className="large-heading">
-                      Let's get Contact an <br />
-                      estimate
+                      Θες να σε βοηθήσω;
                     </h1>
                     {/* <!--Spacer--> */}
                     <div
@@ -79,7 +78,7 @@ const Contact = () => {
                     data-aos-delay="300"
                   >
                     <h5 className="fz-14 text-uppercase has-3-color fw-normal">
-                      Tell us about your project and goals.
+                      Δωσε μας μερικες πληροφοριες.
                     </h5>
                     {/* <!--Spacer--> */}
                     <div
