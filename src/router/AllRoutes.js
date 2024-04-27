@@ -1,5 +1,5 @@
 import React from "react";
-import Preview from "../views/Preview";
+// import Preview from "../views/Preview";
 // Homepage Demo
 import HomeDefault from "../views/all-home-version/HomeDefault";
 import HomeStudio from "../views/all-home-version/HomeStudio";
